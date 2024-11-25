@@ -1,0 +1,36 @@
+https://judge.beecrowd.com/en/problems/view/1182
+
+1182
+
+import java.util.Scanner;
+
+public class Program {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int c = in.nextInt();
+        char t= in.next().charAt(0);
+        double [][] m = new double [12][12];
+        double sum=0 , avr=0;
+        if(0<=c&& c <=11 )
+        {
+            for (int i=0; i<m.length;i++){
+                for (int j=0; j < m[i].length;j++ ){
+                    m[i][j]= in.nextDouble();
+                }
+            }
+
+            for (int i=0 ; i<m.length;i++){
+                sum+=m[i][c];
+            }
+            avr = sum /12;
+            if (t=='S'){
+                System.out.printf("%.1f%n", sum);
+            }
+            else if (t=='M') {
+                System.out.printf("%.1f%n", avr);
+            }
+        }
+    }
+}
+
