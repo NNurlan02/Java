@@ -1,0 +1,2 @@
+Select ID, Name , Countrycode, district, population from CITY
+Where ID='1661'
